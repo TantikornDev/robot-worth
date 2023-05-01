@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.16 on darwin)" generated="20230310 12:28:14.693" rpa="false" schemaversion="3">
+<suite id="s1" name="Menu 3" source="/Users/kingdouchebag/Desktop/Freezone_Project/Freezome_Robot/local/menu_3/menu_3.robot">
+<test id="s1-t1" name="Main Test" line="433">
+<kw name="Open Browser CASHCALL">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230310 12:28:14.774" level="INFO">Opening browser 'Chrome' to base url 'https://freezoneinventory-dev.azurewebsites.net/#/dev'.</msg>
+<status status="PASS" starttime="20230310 12:28:14.774" endtime="20230310 12:28:21.276"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230310 12:28:21.276" endtime="20230310 12:28:22.055"/>
+</kw>
+<status status="PASS" starttime="20230310 12:28:14.774" endtime="20230310 12:28:22.055"/>
+</kw>
+<kw name="Login">
+<arg>${URL}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230310 12:28:25.056" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230310 12:28:22.056" endtime="20230310 12:28:25.057"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${element_x}</var>
+<arg>xpath=//button[@id="onetrust-accept-btn-handler"]</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230310 12:28:25.168" level="INFO">${element_x} = 1</msg>
+<status status="PASS" starttime="20230310 12:28:25.057" endtime="20230310 12:28:25.168"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${element_0}</var>
+<arg>xpath=//input[@id="codeBypass"]</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230310 12:28:25.174" level="INFO">${element_0} = 1</msg>
+<status status="PASS" starttime="20230310 12:28:25.168" endtime="20230310 12:28:25.174"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${element_1}</var>
+<arg>xpath=//button[contains(text(), '${Submit_Button}')]</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230310 12:28:25.192" level="INFO">${element_1} = 1</msg>
+<status status="PASS" starttime="20230310 12:28:25.174" endtime="20230310 12:28:25.192"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//button[@id="onetrust-accept-btn-handler"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230310 12:28:25.192" endtime="20230310 12:28:25.196"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[@id="onetrust-accept-btn-handler"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230310 12:28:25.196" level="INFO">Clicking element 'xpath=//button[@id="onetrust-accept-btn-handler"]'.</msg>
+<status status="PASS" starttime="20230310 12:28:25.196" endtime="20230310 12:28:25.270"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@id="codeBypass"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230310 12:28:25.270" endtime="20230310 12:28:25.274"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@id="codeBypass"]</arg>
+<arg>${robot_login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230310 12:28:25.275" level="INFO">Typing text '3aa94123-01f6-47b8-b5ef-82400f62dccb' into text field 'xpath=//input[@id="codeBypass"]'.</msg>
+<status status="PASS" starttime="20230310 12:28:25.274" endtime="20230310 12:28:25.816"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=//input[@id="codeBypass"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230310 12:28:26.429" level="INFO">Current page contains element 'xpath=//input[@id="codeBypass"]'.</msg>
+<status status="PASS" starttime="20230310 12:28:25.816" endtime="20230310 12:28:26.429"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${element_0}</var>
+<arg>xpath=//input[@id="codeBypass"]</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230310 12:28:26.433" level="INFO">${element_0} = 1</msg>
+<status status="PASS" starttime="20230310 12:28:26.429" endtime="20230310 12:28:26.433"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//button[contains(text(), '${Submit_Button}')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230310 12:28:26.433" endtime="20230310 12:28:26.712"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=//button[contains(text(), '${Submit_Button}')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230310 12:28:26.717" level="INFO">Current page contains element 'xpath=//button[contains(text(), 'เข้าสู่ระบบ')]'.</msg>
+<status status="PASS" starttime="20230310 12:28:26.712" endtime="20230310 12:28:26.717"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[contains(text(), '${Submit_Button}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230310 12:28:26.718" level="INFO">Clicking element 'xpath=//button[contains(text(), 'เข้าสู่ระบบ')]'.</msg>
+<status status="PASS" starttime="20230310 12:28:26.717" endtime="20230310 12:28:29.601"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${element_1}</var>
+<arg>xpath=//button[contains(text(), '${Submit_Button}')]</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230310 12:28:29.727" level="INFO">${element_1} = 0</msg>
+<status status="PASS" starttime="20230310 12:28:29.601" endtime="20230310 12:28:29.727"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Check Function: 2. Login Requestor C2</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230310 12:28:29.727" level="INFO">Check Function: 2. Login Requestor C2</msg>
+<status status="PASS" starttime="20230310 12:28:29.727" endtime="20230310 12:28:29.727"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Check Element: 'Input Secret Code' ${element_0}</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230310 12:28:29.728" level="INFO">Check Element: 'Input Secret Code' 1</msg>
+<status status="PASS" starttime="20230310 12:28:29.728" endtime="20230310 12:28:29.728"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Check Element: 'Login Button' ${element_1}</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230310 12:28:29.728" level="INFO">Check Element: 'Login Button' 0</msg>
+<status status="PASS" starttime="20230310 12:28:29.728" endtime="20230310 12:28:29.728"/>
+</kw>
+<status status="PASS" starttime="20230310 12:28:22.055" endtime="20230310 12:28:29.728"/>
+</kw>
+<kw name="Tab 3 Menu 1">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230310 12:28:30.729" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230310 12:28:29.728" endtime="20230310 12:28:30.729"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//span[contains(text(), 'พื้นที่คลังสินค้า')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230310 12:28:30.730" endtime="20230310 12:28:30.752"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=//span[contains(text(), 'พื้นที่คลังสินค้า')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230310 12:28:30.762" level="INFO">Current page contains element 'xpath=//span[contains(text(), 'พื้นที่คลังสินค้า')]'.</msg>
+<status status="PASS" starttime="20230310 12:28:30.753" endtime="20230310 12:28:30.762"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//span[contains(text(), 'พื้นที่คลังสินค้า')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230310 12:28:30.763" level="INFO">Clicking element 'xpath=//span[contains(text(), 'พื้นที่คลังสินค้า')]'.</msg>
+<status status="PASS" starttime="20230310 12:28:30.762" endtime="20230310 12:28:30.827"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//div/li/a[contains(text(), 'พื้นที่ปลอดภาษี (ระนอง)')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230310 12:28:30.827" endtime="20230310 12:28:30.837"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=//div/li/a[contains(text(), 'พื้นที่ปลอดภาษี (ระนอง)')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230310 12:28:30.841" level="INFO">Current page contains element 'xpath=//div/li/a[contains(text(), 'พื้นที่ปลอดภาษี (ระนอง)')]'.</msg>
+<status status="PASS" starttime="20230310 12:28:30.837" endtime="20230310 12:28:30.841"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div/li/a[contains(text(), 'พื้นที่ปลอดภาษี (ระนอง)')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230310 12:28:30.842" level="INFO">Clicking element 'xpath=//div/li/a[contains(text(), 'พื้นที่ปลอดภาษี (ระนอง)')]'.</msg>
+<status status="PASS" starttime="20230310 12:28:30.842" endtime="20230310 12:28:32.124"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230310 12:28:33.127" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230310 12:28:32.124" endtime="20230310 12:28:33.127"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=//span[contains(text(), 'โครงสร้างเว็บไซต์')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230310 12:28:33.128" endtime="20230310 12:28:33.494"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230310 12:28:34.497" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230310 12:28:33.495" endtime="20230310 12:28:34.497"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//button[contains(text(), 'FZ-Entrance-02')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230310 12:28:34.498" endtime="20230310 12:28:34.519"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=//button[contains(text(), 'FZ-Entrance-02')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230310 12:28:34.527" level="INFO">Current page contains element 'xpath=//button[contains(text(), 'FZ-Entrance-02')]'.</msg>
+<status status="PASS" starttime="20230310 12:28:34.519" endtime="20230310 12:28:34.527"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[contains(text(), 'FZ-Entrance-02')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230310 12:28:34.528" level="INFO">Clicking element 'xpath=//button[contains(text(), 'FZ-Entrance-02')]'.</msg>
+<status status="PASS" starttime="20230310 12:28:34.527" endtime="20230310 12:28:34.625"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230310 12:28:35.627" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230310 12:28:34.625" endtime="20230310 12:28:35.627"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>1.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230310 12:28:36.275" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="1.png"&gt;&lt;img src="1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230310 12:28:35.627" endtime="20230310 12:28:36.275"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230310 12:28:37.277" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230310 12:28:36.275" endtime="20230310 12:28:37.277"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//button/h2/div[contains(text(), 'Ground')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230310 12:28:37.277" endtime="20230310 12:28:37.285"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=//button/h2/div[contains(text(), 'Ground')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230310 12:28:37.289" level="INFO">Current page contains element 'xpath=//button/h2/div[contains(text(), 'Ground')]'.</msg>
+<status status="PASS" starttime="20230310 12:28:37.285" endtime="20230310 12:28:37.289"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button/h2/div[contains(text(), 'Ground')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230310 12:28:37.289" level="INFO">Clicking element 'xpath=//button/h2/div[contains(text(), 'Ground')]'.</msg>
+<status status="PASS" starttime="20230310 12:28:37.289" endtime="20230310 12:28:37.554"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230310 12:28:38.555" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230310 12:28:37.554" endtime="20230310 12:28:38.555"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//button/h2/div[contains(text(), 'Yard')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230310 12:28:38.556" endtime="20230310 12:28:38.571"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=//button/h2/div[contains(text(), 'Yard')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230310 12:28:38.576" level="INFO">Current page contains element 'xpath=//button/h2/div[contains(text(), 'Yard')]'.</msg>
+<status status="PASS" starttime="20230310 12:28:38.571" endtime="20230310 12:28:38.576"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button/h2/div[contains(text(), 'Yard')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230310 12:28:38.576" level="INFO">Clicking element 'xpath=//button/h2/div[contains(text(), 'Yard')]'.</msg>
+<status status="PASS" starttime="20230310 12:28:38.576" endtime="20230310 12:28:38.876"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230310 12:28:39.876" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230310 12:28:38.876" endtime="20230310 12:28:39.876"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//button[contains(text(), 'FZ-Yard-01')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230310 12:28:39.877" endtime="20230310 12:28:39.885"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=//button[contains(text(), 'FZ-Yard-01')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230310 12:28:39.890" level="INFO">Current page contains element 'xpath=//button[contains(text(), 'FZ-Yard-01')]'.</msg>
+<status status="PASS" starttime="20230310 12:28:39.885" endtime="20230310 12:28:39.890"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[contains(text(), 'FZ-Yard-01')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230310 12:28:39.890" level="INFO">Clicking element 'xpath=//button[contains(text(), 'FZ-Yard-01')]'.</msg>
+<status status="PASS" starttime="20230310 12:28:39.890" endtime="20230310 12:28:39.947"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230310 12:28:40.948" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230310 12:28:39.947" endtime="20230310 12:28:40.948"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>3.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230310 12:28:41.619" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="3.png"&gt;&lt;img src="3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230310 12:28:40.948" endtime="20230310 12:28:41.620"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230310 12:28:42.620" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230310 12:28:41.620" endtime="20230310 12:28:42.620"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//button/h2/div[contains(text(), 'Yard')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230310 12:28:42.620" endtime="20230310 12:28:42.626"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=//button/h2/div[contains(text(), 'Yard')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230310 12:28:42.630" level="INFO">Current page contains element 'xpath=//button/h2/div[contains(text(), 'Yard')]'.</msg>
+<status status="PASS" starttime="20230310 12:28:42.626" endtime="20230310 12:28:42.630"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button/h2/div[contains(text(), 'Yard')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230310 12:28:42.630" level="INFO">Clicking element 'xpath=//button/h2/div[contains(text(), 'Yard')]'.</msg>
+<status status="PASS" starttime="20230310 12:28:42.630" endtime="20230310 12:28:42.652"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230310 12:28:43.653" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230310 12:28:42.652" endtime="20230310 12:28:43.653"/>
+</kw>
+<kw name="Get Window Titles" library="SeleniumLibrary">
+<var>${windowhandles_1}</var>
+<doc>Returns and logs titles of all windows of the selected browser.</doc>
+<msg timestamp="20230310 12:28:46.343" level="INFO">Altogether 3 items.
+1: พื้นที่ปลอดภาษี (ระนอง) | PTTEP
+2: Login
+3: Login</msg>
+<msg timestamp="20230310 12:28:46.344" level="INFO">${windowhandles_1} = ['พื้นที่ปลอดภาษี (ระนอง) | PTTEP', 'Login', 'Login']</msg>
+<status status="PASS" starttime="20230310 12:28:43.653" endtime="20230310 12:28:46.344"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${windowhandles_2}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20230310 12:28:46.348" level="INFO">${windowhandles_2} = ['59EC677D0B9D6A91F5B9C031CF860425', 'DEED1523E7E731906F9C69A5FC6ACD57', '2E447DF44EA74B3FE4F830EACDFF5BC7']</msg>
+<status status="PASS" starttime="20230310 12:28:46.344" endtime="20230310 12:28:46.348"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Check Window: ${windowhandles_1}</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230310 12:28:46.348" level="INFO">Check Window: ['พื้นที่ปลอดภาษี (ระนอง) | PTTEP', 'Login', 'Login']</msg>
+<status status="PASS" starttime="20230310 12:28:46.348" endtime="20230310 12:28:46.348"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Check Window: ${windowhandles_2}</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230310 12:28:46.348" level="INFO">Check Window: ['59EC677D0B9D6A91F5B9C031CF860425', 'DEED1523E7E731906F9C69A5FC6ACD57', '2E447DF44EA74B3FE4F830EACDFF5BC7']</msg>
+<status status="PASS" starttime="20230310 12:28:46.348" endtime="20230310 12:28:46.348"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230310 12:28:47.350" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230310 12:28:46.348" endtime="20230310 12:28:47.350"/>
+</kw>
+<status status="PASS" starttime="20230310 12:28:29.728" endtime="20230310 12:28:47.351"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230310 12:28:47.352" endtime="20230310 12:28:47.494"/>
+</kw>
+<status status="PASS" starttime="20230310 12:28:14.773" endtime="20230310 12:28:47.494"/>
+</test>
+<status status="PASS" starttime="20230310 12:28:14.694" endtime="20230310 12:28:47.495"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Menu 3">Menu 3</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
